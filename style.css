@@ -3,14 +3,23 @@ body {
     margin: 0;
     padding: 0;
     background: linear-gradient(to bottom right, #6A0572, #AB83A1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
-header {
+.info-box {
     text-align: center;
     padding: 20px;
-    background-color: #333;
+    background-color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h1 {
     color: white;
-    border-radius: 15px;
+    margin-bottom: 10px;
 }
 
 img {
@@ -19,13 +28,8 @@ img {
     height: auto;
 }
 
-.info-box {
-    width: 80%;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: black;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+.content {
+    margin-top: 20px;
 }
 
 h2 {
