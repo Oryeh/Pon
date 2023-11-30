@@ -14,47 +14,41 @@ body {
     padding: 30px;
     background-color: black;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-
-h1 {
-    color: white;
-    margin-bottom: 10px;
-}
-
-img {
-    border-radius: 50%;
-    max-width: 200px; /* Увеличено максимальное значение */
-    height: auto;
-    border: 5px solid white; /* Добавлен белый обвод вокруг аватара */
+    border-radius: 15px; /* Увеличено значение для квадрата */
 }
 
 .avatar-container {
     position: relative;
+    display: inline-block;
 }
 
-.avatar-container:after {
+img {
+    border-radius: 50%;
+    max-width: 250px; /* Увеличено максимальное значение */
+    height: auto;
+    border: 5px solid white;
+}
+
+.line {
     content: '';
     position: absolute;
     width: 100%;
     height: 1px;
     background-color: white;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    z-index: -1; /* Чтобы линия была под текстом */
+    bottom: -5px; /* Расположение линии ниже изображения */
 }
 
 h2 {
     color: white;
-    font-weight: bold; /* Сделан текст жирнее */
-    margin-top: 10px; /* Добавлен отступ сверху */
+    font-weight: bold;
+    margin-top: 10px;
 }
 
 .content {
     margin-top: 20px;
 }
 
+h2,
 .white-text {
     color: white;
 }
