@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background: linear-gradient(to bottom right, #6A0572, #AB83A1);
 }
 
 header {
@@ -10,6 +10,7 @@ header {
     padding: 20px;
     background-color: #333;
     color: white;
+    border-radius: 15px;
 }
 
 img {
@@ -18,9 +19,19 @@ img {
     height: auto;
 }
 
-section {
+.info-box {
+    width: 80%;
+    margin: 20px auto;
     padding: 20px;
-    margin: 20px 0;
-    background-color: white;
+    background-color: black;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h2 {
+    color: white;
+}
+
+.white-text {
+    color: white;
 }
