@@ -14,7 +14,7 @@ body {
     padding: 60px;
     background-color: black;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 30px; /* Увеличено значение для квадрата */
+    border-radius: 15px; /* Увеличено значение для квадрата */
 }
 
 .avatar-container {
@@ -30,12 +30,10 @@ img {
 }
 
 .line {
-    content: '';
-    position: absolute;
     width: 100%;
-    height: 1px;
+    height: 2px; /* Увеличено значение для толщины линии */
     background-color: white;
-    bottom: -5px; /* Расположение линии ниже изображения */
+    margin: 15px 0; /* Добавлен отступ сверху и снизу линии */
 }
 
 h2 {
