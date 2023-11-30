@@ -11,7 +11,7 @@ body {
 
 .info-box {
     text-align: center;
-    padding: 150px;
+    padding: 125px;
     background-color: black;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 15px; /* Увеличено значение для квадрата */
