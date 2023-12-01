@@ -8,15 +8,20 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentGradientIndex = 0;
 
     const infoBox = document.querySelector(".info-box");
+    const body = document.body;
 
     function setNextGradient() {
         currentGradientIndex = (currentGradientIndex + 1) % gradients.length;
-        document.body.style.background = gradients[currentGradientIndex];
+        body.style.background = gradients[currentGradientIndex];
     }
 
-    // Переключение фона при клике на .info-box
-    infoBox.addEventListener("click", setNextGradient);
+    // Переключение фона при клике на body (кроме .info-box)
+    body.addEventListener("click", function (event) {
+        if (!infoBox.contains(event.target)) {
+            setNextGradient();
+        }
+    });
 
     // Начальный фон
-    document.body.style.background = gradients[currentGradientIndex];
+    body.style.background = gradients[currentGradientIndex];
 });
