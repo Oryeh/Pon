@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentGradientIndex = 0;
 
     const infoBox = document.querySelector(".info-box");
-    const themeButton = document.getElementById("themeButton");
 
     function setNextGradient() {
         currentGradientIndex = (currentGradientIndex + 1) % gradients.length;
@@ -17,9 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Переключение фона при клике на .info-box
     infoBox.addEventListener("click", setNextGradient);
-
-    // Переключение фона при клике на кнопку
-    themeButton.addEventListener("click", setNextGradient);
 
     // Начальный фон
     document.body.style.background = gradients[currentGradientIndex];
