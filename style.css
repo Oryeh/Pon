@@ -2,7 +2,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    transition: background 0.5s ease;
+    background: linear-gradient(to bottom right, #6A0572, #AB83A1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
 .info-box {
@@ -10,7 +14,7 @@ body {
     padding: 30px;
     background-color: black;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 15px; /* Закругленные углы */
+    cursor: pointer;
 }
 
 .avatar-container {
