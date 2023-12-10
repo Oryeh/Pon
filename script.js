@@ -6,6 +6,11 @@ document.addEventListener('DOMContentLoaded', function() {
     for (let i = 0; i < 50; i++) {
         createStar();
     }
+
+    // Добавляем таймер, чтобы текст не исчезал через несколько секунд
+    setTimeout(function() {
+        infoBox.style.animation = 'none'; // Отключаем анимацию после появления
+    }, 1000); // 1000 миллисекунд (1 секунда)
 });
 
 function createStar() {
