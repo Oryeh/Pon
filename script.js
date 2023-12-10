@@ -7,10 +7,10 @@ document.addEventListener('DOMContentLoaded', function() {
         createStar();
     }
 
-    // Добавляем таймер, чтобы текст не исчезал через несколько секунд
-    setTimeout(function() {
+    // Добавляем обработчик события окончания анимации
+    infoBox.addEventListener('animationend', function() {
         infoBox.style.animation = 'none'; // Отключаем анимацию после появления
-    }, 10000000); // 1000 миллисекунд (1 секунда)
+    });
 });
 
 function createStar() {
