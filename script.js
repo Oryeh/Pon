@@ -7,9 +7,9 @@ document.addEventListener('DOMContentLoaded', function() {
         createStar();
     }
 
-    // Добавляем обработчик события окончания анимации
-    infoBox.addEventListener('animationend', function() {
-        infoBox.style.animation = 'none'; // Отключаем анимацию после появления
+    // Добавляем обработчик события каждой итерации анимации
+    infoBox.addEventListener('animationiteration', function() {
+        infoBox.style.animation = 'none'; // Отключаем анимацию после каждой итерации
     });
 });
 
