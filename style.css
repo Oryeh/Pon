@@ -45,8 +45,8 @@ body {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    animation: snowfall 300s linear infinite; /* Длительность анимации в 5 минут */
-    animation-delay: calc(-300s * var(--delay)); /* Распределение задержек для каждой снежинки */
+    animation: snowfall 30000000s linear infinite; /* Длительность анимации в 5 минут */
+    animation-delay: calc(-30000000s * var(--delay)); /* Распределение задержек для каждой снежинки */
     z-index: 1; /* Назначаем z-index для .snowflake */
 }
 
