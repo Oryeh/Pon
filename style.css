@@ -56,5 +56,5 @@ body {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    animation: starAppear 1s ease-out;
+    animation: starAppear 1s ease-out infinite;
 }
