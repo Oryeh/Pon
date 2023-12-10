@@ -11,7 +11,12 @@ body {
 }
 
 .info-box {
+    display: none;
     text-align: center;
+    opacity: 0;
+    animation: fadeIn 300s ease-out forwards; /* Длительность анимации в 5 минут, forwards для сохранения состояния после завершения */
+    position: relative;
+    z-index: 2; /* Назначаем z-index для .info-box */
 }
 
 .avatar-container img {
@@ -26,23 +31,37 @@ body {
     margin: 0 auto;
 }
 
-@keyframes starAppear {
+@keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(-50px);
     }
     to {
         opacity: 1;
-        transform: translateY(0);
     }
 }
 
-.star {
+@keyframes snowfall {
+    from {
+        transform: translateY(-50vh); /* Уменьшаем начальное смещение, чтобы снег плавно появлялся */
+    }
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+.snowflake {
     position: absolute;
-    background: transparent;
-    border: none;
+    background: #fff;
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    animation: starAppear 1s ease-out;
+    animation: snowfall 300s linear infinite; /* Длительность анимации в 5 минут */
+    animation-delay: calc(-300s * var(--delay)); /* Распределение задержек для каждой снежинки */
+    z-index: 1; /* Назначаем z-index для .snowflake */
 }
+
+.snowflake:nth-child(1) { --delay: 0; }
+.snowflake:nth-child(2) { --delay: 0.2; }
+.snowflake:nth-child(3) { --delay: 0.4; }
+.snowflake:nth-child(4) { --delay: 0.6; }
+.snowflake:nth-child(5) { --delay: 0.8; }
