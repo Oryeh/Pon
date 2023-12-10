@@ -14,7 +14,7 @@ body {
     display: none;
     text-align: center;
     opacity: 0;
-    animation: fadeIn 5s ease-out infinite;
+    animation: fadeIn 300s ease-out infinite; /* 5 минут = 300 секунд */
     position: relative;
     z-index: 2; /* Назначаем z-index для .info-box */
 }
@@ -42,7 +42,7 @@ body {
 
 @keyframes snowfall {
     from {
-        transform: translateY(-100vh);
+        transform: translateY(-50vh); /* Уменьшаем начальное смещение, чтобы снег плавно появлялся */
     }
     to {
         transform: translateY(100vh);
@@ -55,6 +55,6 @@ body {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    animation: snowfall 5s linear infinite;
+    animation: snowfall 10s linear infinite; /* Уменьшаем скорость падения снега */
     z-index: 1; /* Назначаем z-index для .snowflake */
 }
