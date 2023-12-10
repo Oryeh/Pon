@@ -15,6 +15,8 @@ body {
     text-align: center;
     opacity: 0;
     animation: fadeIn 1s ease-out infinite;
+    position: relative;
+    z-index: 2; /* Назначаем z-index для .info-box */
 }
 
 .avatar-container img {
@@ -57,4 +59,5 @@ body {
     height: 10px;
     border-radius: 50%;
     animation: starAppear 1s ease-out infinite;
+    z-index: 1; /* Назначаем z-index для .star */
 }
