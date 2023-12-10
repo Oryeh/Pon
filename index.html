@@ -5,38 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=5.0">
     <link rel="stylesheet" href="style.css">
     <title>T1dy - Карточка</title>
-    <script>
-        function sendDiscordWebhook() {
-            // URL вашего вебхука Discord
-            const webhookUrl = 'https://discord.com/api/webhooks/ваш_идентификатор';
-
-            // Ссылка, которую вы хотите отправить в вебхук
-            const linkToSend = 'https://example.com';
-
-            // Создаем объект с данными для отправки
-            const data = {
-                content: `Новая ссылка: ${linkToSend}`
-            };
-
-            // Отправляем запрос на вебхук
-            fetch(webhookUrl, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! Status: ${response.status}`);
-                }
-                console.log('Успешно отправлено в Discord!');
-            })
-            .catch(error => {
-                console.error('Ошибка при отправке в Discord:', error);
-            });
-        }
-    </script>
 </head>
 <body>
     <section class="info-box">
@@ -52,7 +20,7 @@
                 Кроме майнкрафта играю в Rust, Dota 2.<br>
                 Учу языки программирования как: Python, Java, JavaScript. Иногда делаю сайты.<br>
                 К примеру этот сайт был написан с нуля мною.<br>
-                <a href="https://example.com" onclick="sendDiscordWebhook()">Ссылка на мой сайт</a>
+                <З
             </p>
         </div>
     </section>
