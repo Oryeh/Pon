@@ -14,7 +14,7 @@ body {
     display: none;
     text-align: center;
     opacity: 0;
-    animation: fadeIn 300s ease-out infinite; /* 5 минут = 300 секунд */
+    animation: fadeIn 300s ease-out forwards; /* Длительность анимации в 5 минут, forwards для сохранения состояния после завершения */
     position: relative;
     z-index: 2; /* Назначаем z-index для .info-box */
 }
