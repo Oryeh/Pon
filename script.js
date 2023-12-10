@@ -1,16 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     const infoBox = document.getElementById('infoBox');
     infoBox.style.display = 'block';
-    infoBox.style.animation = 'fadeIn 1s ease-out';
 
     for (let i = 0; i < 50; i++) {
         createStar();
     }
-
-    // Добавляем обработчик события каждой итерации анимации
-    infoBox.addEventListener('animationiteration', function() {
-        infoBox.style.animation = 'none'; // Отключаем анимацию после каждой итерации
-    });
 });
 
 function createStar() {
