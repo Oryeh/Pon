@@ -8,23 +8,9 @@ document.addEventListener('DOMContentLoaded', init);
     for (let i = 0; i < 50; i++) {
         createSnowflake();
     }
-});
-function init() {
-  const container = document.getElementById('scene-container');
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-  camera.position.z = 5;
-  const renderer = new THREE.WebGLRenderer();
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  container.appendChild(renderer.domElement);
-
 function createSnowflake() {
     const snowflake = document.createElement('div');
     snowflake.className = 'snowflake';
-  const geometry = new THREE.ConeGeometry(2, 4, 8);
-  const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-  const tree = new THREE.Mesh(geometry, material);
-  scene.add(tree);
 
     const size = Math.random() * 3 + 1; // Размер снежинки от 1 до 4
     snowflake.style.width = `${size}px`;
