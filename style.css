@@ -16,7 +16,7 @@ body {
     opacity: 1;
     animation: fadeIn 0s ease-out infinite;
     position: relative;
-    z-index: 2; /* Назначаем z-index для .info-box */
+    z-index: 2;
 }
 
 .avatar-container img {
@@ -56,5 +56,5 @@ body {
     height: 10px;
     border-radius: 50%;
     animation: snowfall 5s linear infinite;
-    z-index: 1; /* Назначаем z-index для .snowflake */
+    z-index: 1;
 }
