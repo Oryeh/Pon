@@ -5,86 +5,221 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="image.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="image.png">
+    <meta charset="UTF-8">
+    <meta property="og:type" content="website">
+    <meta content="summary_large_image" name="twitter:card">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,300,500">
     <style>
+        html {
+            box-sizing: border-box;
+            height: 100%;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+
         body {
             margin: 0;
-            overflow: hidden;
-            background-color: #000;
+            padding: 0;
+            font-size: 21px;
+            background: linear-gradient(to right, #1CB5E0, #8B008B);
             color: #fff;
-            font-family: Arial, sans-serif;
+            font-family: "Poppins", sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
-        }
-
-        .info-box {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            opacity: 1;
-            animation: fadeIn 0s ease-out infinite;
-            position: relative;
-            z-index: 2;
-        }
-
-        .avatar-container img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            margin-bottom: 20px;
+            animation: fadeIn 1s ease-in-out;
         }
 
         .content {
-            max-width: 600px;
-            margin: 0 auto;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out 1s forwards;
         }
 
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-top: 20px;
-            border-radius: 15px;
-            background: linear-gradient(to right, #dcdcdc, #808080);
+        section.card {
+            background: #000046;
+            background: -webkit-linear-gradient(to right, #1CB5E0, rgb(5, 196, 37)146, 182));
+            background: linear-gradient(to right, #1CB5E0, #000046);
+            border-radius: 24px 24px 24px 48px;
+            padding: 48px 48px 48px 308px;
+            margin: 84px 0;
+            min-width: 640px;
+            display: flex;
+            flex-direction: row;
+            align-self: flex-start;
+            position: relative;
+            box-shadow: 5px 0 0 0 rgba(204, 204, 204, 0.3), -5px 0 0 0 rgba(204, 204, 204, 0.3), 0 5px 0 0 rgba(204, 204, 204, 0.3);
+        }
+
+        section.card .text-content {
+            display: flex;
+            flex-direction: column;
+            width: calc(60vw - 192px);
+        }
+
+        section.card .text-content h3 {
+            margin: 0;
+            font-size: 1.5em;
+            max-width: 20ch;
             color: #fff;
-            text-decoration: none;
-            transition: background 0.3s ease;
         }
 
-        .button:hover {
-            background: linear-gradient(to right, #808080, #dcdcdc);
+        section.card .text-content p {
+            margin: 25px 0 24px;
+            color: #fff;
+        }
+
+        section.card .text-content a {
+            border: 3px solid #f2f2f2;
+            color: #ffffff;
+            align-self: flex-start;
+            text-decoration: none;
+            padding: 16px 32px;
+            border-radius: 12px;
+            transition: 400ms all;
+        }
+
+        section.card .text-content a:hover {
+            background: #051c5e;
+            color: white;
+        }
+
+        section.card .visual {
+            width: 240px;
+            height: 100%;
+            position: absolute;
+            top: -24px;
+            left: 24px;
+            overflow: hidden;
+            border-radius: 24px;
+        }
+
+        section.card .visual img {
+            height: 110%;
+        }
+
+        button {
+            width: 165px;
+            height: 62px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 17px;
+            border-radius: 1rem;
+            border: none;
+            position: relative;
+            background: #100720;
+            transition: 0.1s;
+        }
+
+        button::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(255, 94, 247, 1) 17.8%, rgba(2, 245, 255, 1) 100.2%);
+            filter: blur(15px);
+            z-index: -1;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        button:active {
+            transform: scale(0.9) rotate(3deg);
+            background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(255, 94, 247, 1) 17.8%, rgba(2, 245, 255, 1) 100.2%);
+            transition: 0.5s;
         }
 
         @keyframes fadeIn {
             from {
                 opacity: 0;
             }
+
             to {
                 opacity: 1;
+            }
+        }
+
+        @media all and (max-width: 1100px) {
+            body {
+                padding: 96px 48px 24px;
+            }
+
+            section.card {
+                min-width: 100%;
+            }
+
+            section.card .text-content {
+                width: 100%;
+            }
+        }
+
+        @media all and (max-width: 720px) {
+            body {
+                padding: 48px 24px 0;
+            }
+
+            section.card {
+                margin: 64px 0;
+                padding: 88px 36px 36px;
+                flex-direction: column;
+                border-radius: 24px;
+            }
+
+            section.card .text-content h3 {
+                max-width: calc(100% - 150px);
+                font-size: 1em;
+            }
+
+            section.card .text-content p,
+            section.card .text-content a {
+                font-size: 0.8em;
+            }
+
+            section.card .visual {
+                width: 150px;
+                height: 150px;
+                right: 16px;
+                left: auto;
+                border-radius: 50%;
+            }
+
+            section.card .visual img {
+                width: 100%;
+                height: auto;
             }
         }
     </style>
     <title>T1dy - Карточка</title>
 </head>
+
 <body>
-    <section class="info-box" id="infoBox">
-        <div class="avatar-container">
-            <img src="Screenshot_20231119-211041_Gallery.jpg" alt="Бля а че не работает?">
-        </div>
-        <h2>T1dy</h2>
-        <div class="line"></div>
-        <div class="content">
-            <h2>Обо мне</h2>
-            <p class="white-text">
-                Мой никнейм в майнкрафт: T1dy_<br>
-                Кроме майнкрафта играю в Rust, Dota 2.<br>
-                Учу языки программирования как: Python, Java, JavaScript. Иногда делаю сайты.<br>
-                К примеру этот сайт был написан с нуля мною.<br>
-            </p>
-        </div>
-        <a href="https://discord.gg/HcQqHJajsP" class="button">Мой дискорд-сервер.</a>
-    </section>
+    <div class="content">
+        <h1>T1dy</h1>
+        <p>Мой никнейм в майнкрафт: T1dy_<br>
+            Кроме майнкрафта играю в Rust, Dota 2.<br>
+            Учу языки программирования как: Python, Java, JavaScript.<br>
+            Иногда делаю сайты.<br>
+            К примеру этот сайт был написан с нуля мною.</p>
+        <button class="button" onclick="window.location.href='https://discord.gg/HNtDNVknBq'">Мой дискорд-сервер</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelector('.content').style.opacity = 1;
+        });
+    </script>
 </body>
+
 </html>
